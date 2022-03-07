@@ -14,12 +14,42 @@
 
 }
 
-
-
-
 /* Common rules */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
+.flex {
+    display: flex;
+}
+
+
+
+/* Main */
+
+main {
+    height: calc(100vh - 100px);
+}
+
+.sidebar {
+    width: 20%;
+    height: 100%;
+    background-color: var(--sidebar-black);
+
+}
+
+.albums_container {
+    width: 80%;
+    height: 100%;
+    background-color: var(--main-bg-color);
+}
+
+/* Footer */
+
+footer {
+    height: 100px;
+    background-color: var(--footer-bg-color);
+}
+

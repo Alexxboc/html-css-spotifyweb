@@ -41,12 +41,22 @@ img {
 
 .sidebar_top li :hover {
     color: var(--white-color);
+}
+
+.sidebar_top li:hover img {
     filter: brightness(100%);
+}
+
+.sidebar_top li:hover .add {
+    color: var(--white-color);
 }
 
 .sidebar_bottom .install:hover {
     color: var(--white-color);
-    filter: brightness(100%);
+}
+
+.sidebar_bottom .install:hover img {
+    filter: brightness(100%¢);
 }
 
 .fs_16 {

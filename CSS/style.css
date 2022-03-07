@@ -30,9 +30,27 @@ img {
     max-width: 100%;
 }
 
-a {
+.unstyle {
+    list-style: none;
+}
+
+.sidebar a {
     text-decoration: none;
     color: var(--sidebar-gray-text);
+}
+
+.sidebar_top li :hover {
+    color: var(--white-color);
+    filter: brightness(100%);
+}
+
+.sidebar_bottom .install:hover {
+    color: var(--white-color);
+    filter: brightness(100%);
+}
+
+.fs_16 {
+    font-size: 16px;
 }
 
 /* Main */
@@ -41,19 +59,22 @@ main {
     height: calc(100vh - 100px);
 }
 
+/* Sidebar */
+
 .sidebar {
-    width: 15%;
+    width: 13%;
     height: 100%;
     background-color: var(--sidebar-black);
     flex-direction: column;
+    justify-content: space-between;
     padding: 20px;
+    font-weight:600;
+    
 
 }
 
-.albums_container {
-    width: 85%;
-    height: 100%;
-    background-color: var(--main-bg-color);
+.sidebar_top {
+    font-size: 14px;
 }
 
 .sidebar .logo img {
@@ -72,6 +93,7 @@ main {
 
 .sidebar a img {
     height: 30px;
+    filter: brightness(0.5);
 }
 
 .sidebar h4 {
@@ -85,12 +107,14 @@ main {
 }
 
 .add {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: var(--add-bg-gray);
     color: var(--sidebar-black);
-    padding: 5px;
-    height: 30px;
-    width: 30px;
+    font-size: 35px;
+    height: 35px;
+    width: 35px;
     text-align: center;
 }
 
@@ -98,8 +122,49 @@ main {
     margin-bottom: 15px;
 }
 
+.sidebar_bottom {
+    flex-direction: column;
+} 
+.sidebar_bottom .install img {
+    height: 20px;
+    width: auto;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+.sidebar_bottom .install {
+    font-size: 13px;
+}
+
+.sidebar hr {
+    border: 0.5px solid var(--sidebar-gray-text);
+    margin: 10px 0;
+}
+
+.sidebar_bottom .user img {
+    height: 25px;
+    width: 25px;
+    background-color: var(--add-bg-gray);
+    border-radius: 50%;
+    
+}
+
+.sidebar_bottom .user {
+    color: var(--white-color);
+    align-items: center;
+    column-gap: 8px;
+}
 
 
+
+
+/* Album container */
+
+.albums_container {
+    width: 87%;
+    height: 100%;
+    background-color: var(--main-bg-color);
+}
 
 
 

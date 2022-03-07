@@ -1,0 +1,25 @@
+/* Variables */
+
+:root {
+--sidebar-black: #000000;
+--header-black: #080B12;
+--main-bg-color: #141922;
+--footer-bg-color: #282828;
+--sidebar-gray-text: #717171;
+--add-bg-gray: #A3A3A3;
+--loading-bar-light-gray: #C1C1C1;
+--loading-bar-dark-gray: #5A5A5A;
+--home-bg-color: #D2D2D2;
+--white-color: #FFFFFF;
+
+}
+
+
+
+
+/* Common rules */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}

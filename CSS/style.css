@@ -101,7 +101,7 @@ a {
     transform: scale(1.1)
 }
 
-a:active hr {
+a:hover hr {
     visibility: visible;
 }
 
@@ -409,12 +409,14 @@ footer {
     width: 15px;
     height: 15px;
     border-radius: 50%;
-    position: absolute;
-    left: 95px;
-    top:-5px;
     visibility: hidden;
 }
 
+.loading_circle.lg {
+    position: absolute;
+    left: 95px;
+    top:-5px;
+}
 
 .player_right {
     column-gap: 20px;
@@ -431,6 +433,12 @@ footer {
     border: 2px solid var(--loading-bar-light-gray);
     width: 30px;
     height: 1px;
+}
+
+.loading_circle.sm {
+    position: absolute;
+    left: 25px;
+    top:-5px;
 }
 
 

@@ -44,7 +44,7 @@ a {
 }
 .sidebar a, .albums_menu a, .subtitle {
      color: var(--sidebar-gray-text);
-     font-weight:600;
+     font-weight:500;
 }
 
 .circle {
@@ -303,22 +303,27 @@ main {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
 /* Footer */
 
 footer {
     height: 100px;
     background-color: var(--footer-bg-color);
     justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.current_album {
+    align-items: center;
+    column-gap: 10px;
+}
+
+.player_left img {
+    width: 50px;
+    object-fit: contain;
+}
+
+.player_left .subtitle {
+    font-size: 10px;
 }
 

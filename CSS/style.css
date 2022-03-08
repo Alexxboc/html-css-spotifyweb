@@ -443,6 +443,20 @@ footer {
 
 @media screen and (max-width:1200px) {
 
+    .albums_menu ul {
+        display: block;
+        text-align: center;
+    }
+
+    .albums_menu li {
+        display: inline-block;
+        margin-left: 20px;
+    } 
+
+    #block {
+        display: block;
+        margin-top: 50px;
+    }
     .card_container {
         flex-wrap: wrap;
         row-gap: 20px;
@@ -474,29 +488,28 @@ footer {
         top:-3px;
     }
 
-     .albums_menu ul {
-        display: block;
-        text-align: center;
-    }
-
-    .albums_menu li {
-        display: inline-block;
-        margin-left: 20px;
-    } 
-
-    #block {
-        display: block;
-        margin-top: 50px;
-    }
-
-
-
-
-
+    
 }
 
 @media screen and (max-width:768px) {
     
+    .albums_menu ul {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    #block {
+        display: list-item;
+    }
+    
+    .card_container {
+        flex-wrap: wrap;
+        row-gap: 20px;
+    }
+
+    .card {
+        width: calc(100% / 2 - 20px);
+    }
 }
 
 @media screen and (max-width:320px) {

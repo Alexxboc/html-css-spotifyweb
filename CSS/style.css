@@ -31,6 +31,12 @@
     position: relative;
 }
 
+.absolute {
+    position: absolute;
+    left:0;
+    top:0;
+}
+
 img {
     max-width: 100%;
 }
@@ -53,6 +59,10 @@ a {
 
 .fs_16 {
     font-size: 16px;
+}
+
+.fs_30 {
+    font-size: 30px;
 }
 
 .white {
@@ -99,6 +109,25 @@ a:active hr {
     opacity:1;
 }
 
+.player_left a:hover {
+    text-decoration: underline;
+    color: var(--white-color);
+    cursor: pointer;
+}
+
+.animation:hover {
+    transform: scale(1.1);
+}
+
+.loading_charge:hover .loading_circle {
+    visibility: visible;
+    transition: 1ms;
+}
+
+.loading_charge:hover .short {
+    transition: 1ms;
+    border: 2px solid var(--active-green)
+}
 
 
 
@@ -310,12 +339,20 @@ footer {
     background-color: var(--footer-bg-color);
     justify-content: space-between;
     align-items: center;
-    padding: 0 20px;
 }
 
 .current_album {
     align-items: center;
     column-gap: 10px;
+}
+
+.player_left, .player_right {
+    padding: 0 20px;
+}
+
+.player_left {
+    align-items: center;
+    column-gap: 50px;
 }
 
 .player_left img {
@@ -327,3 +364,94 @@ footer {
     font-size: 10px;
 }
 
+.like_folder {
+    column-gap: 15px;
+}
+
+.like_folder a {
+    color: var(--sidebar-gray-text);
+}
+
+.player_main {
+    flex-direction: column;
+    row-gap: 20px;
+    
+}
+
+
+.player {
+    align-items: center;
+    justify-content: center;
+    column-gap: 30px;
+}
+
+.loading_lg {
+    align-items: center;
+    column-gap: 40px;
+    font-size: 12px;
+}
+
+.loading_lg hr {
+    border: 2px solid var(--loading-bar-dark-gray);
+    width: 500px;
+    height: 1px;
+}
+
+
+.loading_lg .short {
+    border: 2px solid var(--loading-bar-light-gray);
+    width: 100px;
+    height: 1px;
+}
+
+.loading_circle {
+    background-color: var(--white-color);
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    position: absolute;
+    left: 95px;
+    top:-5px;
+    visibility: hidden;
+}
+
+
+.player_right {
+    column-gap: 20px;
+    align-items: center;
+}
+
+.player_right hr {
+    border: 2px solid var(--loading-bar-dark-gray);
+    width: 150px;
+    height: 1px;
+}
+
+.player_right .short {
+    border: 2px solid var(--loading-bar-light-gray);
+    width: 30px;
+    height: 1px;
+}
+
+
+
+
+/* Icons */
+
+/* Heart: <i class="fa-solid fa-heart-half"></i>
+
+Folder: <i class="fa-solid fa-folder-blank"></i>
+
+shuffle: <i class="fa-solid fa-shuffle"></i>
+
+Backward: <i class="fa-solid fa-backward-step"></i>
+
+Forward: <i class="fa-solid fa-forward-step"></i>
+
+Arrow rotate : <i class="fa-solid fa-arrow-rotate-right"></i>
+
+List: <i class="fa-solid fa-list"></i>
+
+Video: <i class="fa-solid fa-tv"></i>
+
+Volume: <i class="fa-solid fa-volume-high"></i> */

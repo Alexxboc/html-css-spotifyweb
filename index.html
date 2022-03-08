@@ -344,6 +344,10 @@
                     <!-- /.card -->
                 </div>
                 <!-- /.foryou row -->
+                
+                </div>
+                <!-- /.card container -->
+                
 
                 <div class="popular row">
                     <h2 class="white">Artisti più popolari</h2>
@@ -376,44 +380,80 @@
                         <h3 class="white">Daily Mix 1</h3>
                     </div>
                     <!-- /.card -->
+                    </div>
+                <!-- /.card_container -->
                 </div>
                 <!-- /.popular row -->
-        
-            
-              
         </div>
         <!-- /.albums_container -->
         
             
-            
-           
-        
     </main>
     <!-- /#site_main -->
 
     <footer id="site_footer" class="flex">
-        <div class="player_left">
+        <div class="player_left flex">
             <div class="current_album flex">
                 <img src="./img/sinister.jpeg" alt="">
                 <div class="current_album_title">
                     <h5 class="white">Sinister</h5>
-                    <div class="subtitle">
+                    <a class="subtitle hover">
                         Brano Nome
-                    </div>
+                    </a>
                 </div>
                 <!-- /.current_album_title -->
-
-            </div>
+             </div>
             <!-- current album -->
-            
-
-        </div>
+            <div class="like_folder flex">
+                <a href="#"><i class="fa-solid fa-heart"></i></a>
+                <a href="#"><i class="fa-solid fa-folder"></i></a>
+            </div>
+            <!-- /.like_folder flex -->
+         </div>
         <!-- /.player left -->
-        <div class="player_main">
 
+        <div class="player_main flex">
+            <div class="player flex white">
+                <i class="fa-solid fa-shuffle"></i>
+                <i class="fa-solid fa-backward-step"></i>
+                <i class="fa-solid fa-circle-play fa fs_30 animation"></i>
+                <i class="fa-solid fa-forward-step"></i>
+                <i class="fa-solid fa-arrow-rotate-right"></i>
+            </div>
+            <!-- /.player flex -->
+            <div class="loading_lg flex">
+                <div class="time_played white">
+                    0.25
+                </div>
+                <!-- /.time_played -->
+                <div class="loading_charge relative">
+                    <hr>
+                    <hr class="short absolute">
+                    <div class="loading_circle">
+
+                    </div>
+                    <!-- /.loading_circle -->
+                </div>
+                <!-- /.loading_charge -->
+                
+                <div class="time_left white">
+                    4.35
+                </div>
+                <!-- /.time_left -->
+                
+            </div>
+            <!-- /.loading_lg flex -->
         </div>
         <!-- /.player main -->
-        <div class="player-right">
+        <div class="player_right flex white">
+            <i class="fa-solid fa-list"></i>
+            <i class="fa-solid fa-tv"></i>
+            <i class="fa-solid fa-volume-high"></i>
+            <div class="loading_charge_sm relative">
+                <hr>
+                <hr class="short absolute">
+            </div>
+            <!-- /.loading_charge -->
 
         </div>
         <!-- /.player right -->

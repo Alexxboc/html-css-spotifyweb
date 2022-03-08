@@ -453,10 +453,6 @@ footer {
         width: calc(100% / 4 - 20px);
     }
 
-    .albums_menu {
-        flex-wrap: wrap;
-    }
-
     .loading_lg hr {
         width: 300px;
     }
@@ -478,14 +474,15 @@ footer {
         top:-3px;
     }
 
-    .albums_menu {
+     .albums_menu ul {
         display: block;
         text-align: center;
     }
 
     .albums_menu li {
         display: inline-block;
-    }
+        margin-left: 20px;
+    } 
 
     #block {
         display: block;

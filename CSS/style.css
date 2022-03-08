@@ -42,7 +42,7 @@ img {
 a {
     text-decoration: none;
 }
-.sidebar a, .albums_menu a {
+.sidebar a, .albums_menu a, .subtitle {
      color: var(--sidebar-gray-text);
      font-weight:600;
 }
@@ -88,6 +88,10 @@ a:active hr {
     visibility: visible;
 }
 
+.overlay:hover {
+    opacity:1;
+}
+
 
 
 
@@ -100,12 +104,12 @@ main {
 /* Sidebar */
 
 .sidebar {
-    width: 13%;
+    width: 250px;
     height: 100%;
     background-color: var(--sidebar-black);
     flex-direction: column;
     justify-content: space-between;
-    padding: 20px;
+    padding: 30px;
     
 }
 
@@ -197,8 +201,7 @@ main {
 /* Album container */
 
 .albums_container {
-    width: 87%;
-    height: 100%;
+    width: calc(100% - 250px);
     background-color: var(--main-bg-color);
 }
 
@@ -220,7 +223,13 @@ main {
 }
 
 .albums_main {
-    justify-content: center;
+    height: calc(100% - 100px);
+    justify-content: start;
+    flex-direction: column;
+}
+
+.albums_menu {
+    align-self: center;
 }
 
 .albums_menu ul {
@@ -235,6 +244,59 @@ main {
     left:50%;
     transform: translate(-50%);
 }
+
+.row {
+    margin-top: 50px;
+    padding: 0 20px;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.card_container {
+    width: 100%;
+    column-gap: 20px;
+}
+
+.row_title{
+    font-size: 23px;
+    margin-bottom: 30px;
+    font-weight: bolder;
+}
+
+.card {
+    flex-direction: column;
+    height: 270px;
+    width: 270px;
+    align-items: center;
+}
+
+.overlay {
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+    opacity: 0;
+}
+
+.card h3 {
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.card .subtitle {
+    font-size: 13px;
+}
+
+
+
+
+
 
 
 

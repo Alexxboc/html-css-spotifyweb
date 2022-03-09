@@ -161,7 +161,7 @@ main {
 }
 
 .sidebar .logo_sm {
-    height: 20px;
+    height: 30px;
     display: none;
 }
 
@@ -401,8 +401,10 @@ footer {
 
 .loading_lg hr {
     border: 2px solid var(--loading-bar-dark-gray);
+    border-radius: 10px;
     width: 500px;
     height: 1px;
+
 }
 
 
@@ -433,6 +435,7 @@ footer {
 
 .player_right hr {
     border: 2px solid var(--loading-bar-dark-gray);
+    border-radius: 10px;
     width: 150px;
     height: 1px;
 }
@@ -487,7 +490,7 @@ footer {
     
 }
 
-@media screen and (max-width:768px) {
+@media screen and (max-width:767px) {
     
     .albums_menu ul {
         row-gap: 40px;
@@ -544,21 +547,28 @@ footer {
  }
 
 
-@media screen and (max-width:320px) {
+@media screen and (max-width:480px) {
     main {
-        height: calc(100vh - 60px);
+        height: calc(100vh - 90px);
     }
     
     .sidebar {
-        width: 40px;
+        width: 50px;
         align-items: center;
         padding: 5px;
     }
 
     .albums_container {
-        width: calc(100% - 40px);
+        width: calc(100% - 50px);
         row-gap: 30px;
     }
+
+    .sidebar_top {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
 
     .sidebar .logo_lg {
         display: none;
@@ -569,11 +579,15 @@ footer {
     }
 
     .sidebar a img {
-        height: 20px;
+        height: 28px;
     }
 
     .sidebar .home_menu {
-        margin-top:10px;
+        margin-top: 15px;
+    }
+
+    .sidebar .home_menu li {
+        margin-bottom: 10px;
     }
 
     .text_link,.text {
@@ -589,7 +603,7 @@ footer {
     }
 
     .sidebar_bottom .install img {
-        height: 12px;
+        height: 15px;
         margin-right: 0;
         margin-bottom: 15px;
     }
@@ -599,8 +613,8 @@ footer {
     }
 
     .sidebar_bottom .user img {
-        height: 20px;
-        width: 20px;
+        height: 25px;
+        width: 25px;
         background-color: var(--add-bg-gray);
         border-radius: 50%;
     }
@@ -621,9 +635,9 @@ footer {
     }
 
     .albums_menu ul {
-        font-size: 8px;
-        column-gap: 10px;
-        row-gap: 15px;
+        font-size: 12px;
+        column-gap: 20px;
+        row-gap: 20px;
     }
 
     .row {
@@ -631,11 +645,11 @@ footer {
     }
 
     .row_title {
-        font-size: 16px;
+        font-size: 20px;
     }
 
     .card_container {
-        margin-top: 15px;
+        margin-top: 25px;
     }
 
     .card {
@@ -645,19 +659,19 @@ footer {
     .card h3 {
         margin-top: 5px;
         margin-bottom: 5px;
-        font-size: 10px;
+        font-size: 15px;
     }
 
     .subtitle {
-        font-size: 8px;
+        font-size: 12px;
     }
 
     footer {
-        height: 60px;
+        height: 90px;
     }
 
     .player_left {
-        column-gap: 10px;
+        column-gap: 15px;
     }
 
     .player_left, .player_right {
@@ -665,102 +679,86 @@ footer {
     }
 
     .player_left img {
-        width: 15px;
+        width: 30px;
+    }
+
+    .player_left h5 {
+        font-size: 8px;
     }
 
     .player_left .subtitle {
-        font-size: 4px;
-    }
-
-    .current_album {
-        column-gap: 3px;
-    }
-
-    .current_album_title h5 {
-        font-size: 5px;
-    }
-
-    .current_album a {
         font-size: 6px;
     }
 
+    .current_album {
+        column-gap: 8px;
+    }
+
+    .current_album_title {
+        line-height: 4px;
+    }
+
     .like_folder {
-        font-size: 8px;
-        row-gap: 2px;
+        row-gap: 4px;
+        font-size: 12px;
     }
 
     .player_main {
-
-        row-gap: 10px;
-        
+        row-gap: 12px;
     }
 
     .player {
+        font-size: 12px;
         column-gap: 15px;
-        font-size: 10px;
     }
 
-    .fs_30 {
-        font-size: 20px;
-    }
-    
     .loading_lg hr {
         border: 1px solid var(--loading-bar-dark-gray);
-        height: 1px;
-        width: 80px;
+        width: 100px;
     }
 
     .loading_lg .short {
         border: 1px solid var(--loading-bar-light-gray);
-        width: 30px;
     }
 
     .loading_circle {
         width: 6px;
         height: 6px;
+        border-radius: 50%;
     }
 
     .loading_circle.lg {
         position: absolute;
         left: 25px;
-        top:-2px;
-    }
-
-    .loading_lg {
-        column-gap: 5px;
+        top: -2px;
     }
 
     .loading_charge:hover .short {
-        transition: 1ms;
-        border: 1px solid var(--active-green)
+        border: 1px solid var(--active-green);
     }
     
-
-    .time_played{
-        font-size: 5px;
-    }
-
     .player_right {
-        column-gap: 5px;
-        font-size: 6px;
+        column-gap: 10px;
+        font-size: 12px;
     }
-    
+
     .player_right hr {
         border: 1px solid var(--loading-bar-dark-gray);
         width: 50px;
     }
-    
+
     .player_right .short {
         border: 1px solid var(--loading-bar-light-gray);
         width: 10px;
     }
-    
+
     .loading_circle.sm {
         position: absolute;
-        left: 7px;
+        left: 8px;
         top: -2px;
     }
     
+
 }
 
 

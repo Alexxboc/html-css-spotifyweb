@@ -132,6 +132,21 @@ a:hover hr {
     border: 2px solid var(--active-green)
 }
 
+.hover:hover a::after {
+    visibility: visible;
+  }
+  
+  .home_menu a::after {
+    visibility: hidden;
+    background-color: var(--active-green);
+    width: 3px;
+    height: 40px;
+    position: absolute;
+    left: -29px;
+    transform: translate(-50%);
+    content: "";
+  }
+
 
 
 /* Main */
@@ -275,6 +290,7 @@ main {
 }
 
 .albums_menu ul {
+    justify-content: center;
     flex-wrap: wrap;
     column-gap: 30px;
 }
@@ -307,6 +323,7 @@ main {
 }
 
 .card {
+    text-align: center;
     flex-direction: column;
     align-items: center;
     width: 270px;
@@ -757,6 +774,18 @@ footer {
         left: 8px;
         top: -2px;
     }
+
+    .home_menu a::after {
+        visibility: hidden;
+        background-color: var(--active-green);
+        width: 3px;
+        height: 40px;
+        position: absolute;
+        left: -10px;
+        transform: translate(-50%);
+        content: "";
+      }
+    
     
 
 }

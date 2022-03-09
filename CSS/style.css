@@ -15,7 +15,7 @@
 
 }
 
-/* Common rules */
+/* Common rules & Utility */
 * {
     margin: 0;
     padding: 0;
@@ -80,7 +80,10 @@ a {
     color: white;
 }
 
-
+.hover:hover a::after {
+    visibility: visible;
+  }
+  
 .sidebar_top li:hover img {
     filter: brightness(100%);
 }
@@ -153,9 +156,13 @@ main {
     font-size: 14px;
 }
 
-.sidebar .logo img {
+.sidebar .logo_lg {
     height: 50px;
-    width: auto;
+}
+
+.sidebar .logo_sm {
+    height: 20px;
+    display: none;
 }
 
 .sidebar .home_menu {
@@ -442,6 +449,8 @@ footer {
     top:-5px;
 }
 
+
+
 @media screen and (max-width:1200px) {
 
     .card_container {
@@ -536,6 +545,110 @@ footer {
 
 
 @media screen and (max-width:320px) {
+    .sidebar {
+        width: 40px;
+        align-items: center;
+        padding: 5px;
+    }
+
+    .albums_container {
+        width: calc(100% - 40px);
+        row-gap: 30px;
+    }
+
+    .sidebar .logo_lg {
+        display: none;
+    }
+
+    .sidebar .logo_sm {
+        display: block;
+    }
+
+    .sidebar a img {
+        height: 20px;
+    }
+
+    .sidebar .home_menu {
+        margin-top:10px;
+    }
+
+    .text_link,.text {
+        display: none;
+    }
+
+    .playlist_menu {
+        display: none;
+    }
+
+    .sidebar_bottom {
+        align-items: center;
+    }
+
+    .sidebar_bottom .install img {
+        height: 12px;
+        margin-right: 0;
+        margin-bottom: 30px;
+    }
+
+    .sidebar hr {
+        display: none;
+    }
+
+    .sidebar_bottom .user img {
+        height: 20px;
+        width: 20px;
+        background-color: var(--add-bg-gray);
+        border-radius: 50%;
+    }
+
+    .sidebar_bottom .user {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .albums_header {
+        height: 70px;
+    }
+
+    .upgrade {
+        font-size: 8px;
+        border: 1px solid var(--white-color);
+        padding: 10px 30px;
+    }
+
+    .albums_menu ul {
+        font-size: 8px;
+        column-gap: 10px;
+        row-gap: 15px;
+    }
+
+    .row {
+        padding: 0 5px;
+    }
+
+    .row_title {
+        font-size: 16px;
+    }
+
+    .card_container {
+        margin-top: 15px;
+    }
+
+    .card {
+        width: calc(100% / 2 - 5px);
+    }
+
+    .card h3 {
+        margin-top: 5px;
+        margin-bottom: 5px;
+        font-size: 10px;
+    }
+
+    .subtitle {
+        font-size: 8px;
+    }
+
+
     
 }
 

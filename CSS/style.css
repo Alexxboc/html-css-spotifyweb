@@ -545,6 +545,10 @@ footer {
 
 
 @media screen and (max-width:320px) {
+    main {
+        height: calc(100vh - 60px);
+    }
+    
     .sidebar {
         width: 40px;
         align-items: center;
@@ -587,7 +591,7 @@ footer {
     .sidebar_bottom .install img {
         height: 12px;
         margin-right: 0;
-        margin-bottom: 30px;
+        margin-bottom: 15px;
     }
 
     .sidebar hr {
@@ -648,7 +652,114 @@ footer {
         font-size: 8px;
     }
 
+    footer {
+        height: 60px;
+    }
 
+    .player_left {
+        column-gap: 10px;
+    }
+
+    .player_left, .player_right {
+        padding: 0 10px;
+    }
+
+    .player_left img {
+        width: 15px;
+    }
+
+    .player_left .subtitle {
+        font-size: 4px;
+    }
+
+    .current_album {
+        column-gap: 3px;
+    }
+
+    .current_album_title h5 {
+        font-size: 5px;
+    }
+
+    .current_album a {
+        font-size: 6px;
+    }
+
+    .like_folder {
+        font-size: 8px;
+        row-gap: 2px;
+    }
+
+    .player_main {
+
+        row-gap: 10px;
+        
+    }
+
+    .player {
+        column-gap: 15px;
+        font-size: 10px;
+    }
+
+    .fs_30 {
+        font-size: 20px;
+    }
+    
+    .loading_lg hr {
+        border: 1px solid var(--loading-bar-dark-gray);
+        height: 1px;
+        width: 80px;
+    }
+
+    .loading_lg .short {
+        border: 1px solid var(--loading-bar-light-gray);
+        width: 30px;
+    }
+
+    .loading_circle {
+        width: 6px;
+        height: 6px;
+    }
+
+    .loading_circle.lg {
+        position: absolute;
+        left: 25px;
+        top:-2px;
+    }
+
+    .loading_lg {
+        column-gap: 5px;
+    }
+
+    .loading_charge:hover .short {
+        transition: 1ms;
+        border: 1px solid var(--active-green)
+    }
+    
+
+    .time_played{
+        font-size: 5px;
+    }
+
+    .player_right {
+        column-gap: 5px;
+        font-size: 6px;
+    }
+    
+    .player_right hr {
+        border: 1px solid var(--loading-bar-dark-gray);
+        width: 50px;
+    }
+    
+    .player_right .short {
+        border: 1px solid var(--loading-bar-light-gray);
+        width: 10px;
+    }
+    
+    .loading_circle.sm {
+        position: absolute;
+        left: 7px;
+        top: -2px;
+    }
     
 }
 

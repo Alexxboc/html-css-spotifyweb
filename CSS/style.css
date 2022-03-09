@@ -50,7 +50,7 @@ a {
 }
 .sidebar a, .albums_menu a, .subtitle {
      color: var(--sidebar-gray-text);
-     font-weight:500;
+     font-weight: 600;
 }
 
 .circle {

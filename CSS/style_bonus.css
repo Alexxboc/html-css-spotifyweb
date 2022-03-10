@@ -273,14 +273,18 @@
     
     
     /* Album container */
+
+    .wrapper_music {
+        height:calc(100% - 100px);
+        overflow-y: auto;
+    }
     
     .albums_container {
         width: calc(100% - 250px);
         background-color: var(--main-bg-color);
         flex-direction: column;
         row-gap: 30px;
-        overflow-y: auto;
-    }
+     }
     
     
     .albums_header {
@@ -490,14 +494,16 @@
     
     @media screen and (max-width:1200px) {
         
+        .albums_container {
+            overflow: hidden;
+        }
+
         .row {
             flex-wrap: nowrap;
-            overflow: hidden;
         }
            
 
         .card_container {
-            flex-wrap:wrap;
             row-gap: 20px;
             
         }

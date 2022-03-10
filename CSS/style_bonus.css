@@ -50,7 +50,7 @@
     }
     .sidebar a, .albums_menu a, .subtitle {
          color: var(--sidebar-gray-text);
-         font-weight:500;
+         font-weight: 600;
     }
     
     .circle {
@@ -100,10 +100,6 @@
         filter: brightness(100%);
     }
     
-    .upgrade:hover {
-        transform: scale(1.1)
-    }
-    
     a:hover hr {
         visibility: visible;
     }
@@ -117,10 +113,11 @@
         color: var(--white-color);
         cursor: pointer;
     }
-    
+
     .animation:hover {
         transform: scale(1.1);
     }
+    
     
     .loading_charge:hover .loading_circle {
         visibility: visible;
@@ -132,7 +129,41 @@
         border: 2px solid var(--active-green)
     }
     
+    .hover:hover a::after {
+        visibility: visible;
+      }
+      
+      .home_menu a::after {
+        visibility: hidden;
+        background-color: var(--active-green);
+        width: 3px;
+        height: 40px;
+        position: absolute;
+        left: -29px;
+        transform: translate(-50%);
+        content: "";
+      }
+
+      /* Bonus animations */
     
+    .img_container:hover img {
+        transform: scale(1.2);
+        transition: 1000ms;
+    }
+
+    .img_container:hover .overlay {
+        transform:scale(1.2);
+        transition: 1000ms;
+    }
+    
+    .upgrade:hover {
+        transform: scale(1.1);
+        color: #ADFF2F;
+        border: 1px solid var(--active-green);
+        transition: 1000ms;
+
+        
+    }
     
     /* Main */
     
@@ -161,7 +192,7 @@
     }
     
     .sidebar .logo_sm {
-        height: 20px;
+        height: 30px;
         display: none;
     }
     
@@ -275,6 +306,7 @@
     }
     
     .albums_menu ul {
+        justify-content: center;
         flex-wrap: wrap;
         column-gap: 30px;
     }
@@ -291,7 +323,8 @@
     .row {
         padding: 0 20px;
         flex-direction: column;
-        flex-wrap: wrap;
+        /* flex-wrap: nowrap;
+        overflow: hidden; */
         margin-top: 30px;
     }
     
@@ -307,6 +340,7 @@
     }
     
     .card {
+        text-align: center;
         flex-direction: column;
         align-items: center;
         width: 270px;
@@ -401,8 +435,10 @@
     
     .loading_lg hr {
         border: 2px solid var(--loading-bar-dark-gray);
+        border-radius: 10px;
         width: 500px;
         height: 1px;
+    
     }
     
     
@@ -433,6 +469,7 @@
     
     .player_right hr {
         border: 2px solid var(--loading-bar-dark-gray);
+        border-radius: 10px;
         width: 150px;
         height: 1px;
     }
@@ -452,9 +489,15 @@
     
     
     @media screen and (max-width:1200px) {
-    
+        
+        .row {
+            flex-wrap: nowrap;
+            overflow: hidden;
+        }
+           
+
         .card_container {
-            flex-wrap: wrap;
+            flex-wrap:wrap;
             row-gap: 20px;
             
         }
@@ -487,8 +530,12 @@
         
     }
     
-    @media screen and (max-width:768px) {
+    @media screen and (max-width:767px) {
         
+        footer {
+            justify-content: space-around;
+        }
+
         .albums_menu ul {
             row-gap: 40px;
         }
@@ -508,10 +555,18 @@
         .player_left img {
             width: 45px;
         }
+
+        .player_left {
+            column-gap: 30px;
+        }
     
         .like_folder {
             flex-direction: column;
             row-gap: 5px;
+        }
+
+        .current_album_title {
+            display: none;
         }
     
         .loading_lg hr {
@@ -539,26 +594,46 @@
             column-gap: 10px;
             font-size: 8px;
         }
+
+        .player_right {
+            column-gap: 5px;
+        }
+
+        .player_right .hidden {
+            display: none;
+        }
     
     
      }
     
     
-    @media screen and (max-width:320px) {
+    @media screen and (max-width:480px) {
+       
+        footer {
+            justify-content: space-around;
+        }
+       
         main {
-            height: calc(100vh - 60px);
+            height: calc(100vh - 90px);
         }
         
         .sidebar {
-            width: 40px;
+            width: 50px;
             align-items: center;
             padding: 5px;
         }
     
         .albums_container {
-            width: calc(100% - 40px);
+            width: calc(100% - 50px);
             row-gap: 30px;
         }
+    
+        .sidebar_top {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
     
         .sidebar .logo_lg {
             display: none;
@@ -569,11 +644,15 @@
         }
     
         .sidebar a img {
-            height: 20px;
+            height: 28px;
         }
     
         .sidebar .home_menu {
-            margin-top:10px;
+            margin-top: 15px;
+        }
+    
+        .sidebar .home_menu li {
+            margin-bottom: 10px;
         }
     
         .text_link,.text {
@@ -589,7 +668,7 @@
         }
     
         .sidebar_bottom .install img {
-            height: 12px;
+            height: 15px;
             margin-right: 0;
             margin-bottom: 15px;
         }
@@ -599,8 +678,8 @@
         }
     
         .sidebar_bottom .user img {
-            height: 20px;
-            width: 20px;
+            height: 25px;
+            width: 25px;
             background-color: var(--add-bg-gray);
             border-radius: 50%;
         }
@@ -621,9 +700,9 @@
         }
     
         .albums_menu ul {
-            font-size: 8px;
-            column-gap: 10px;
-            row-gap: 15px;
+            font-size: 12px;
+            column-gap: 20px;
+            row-gap: 20px;
         }
     
         .row {
@@ -631,11 +710,11 @@
         }
     
         .row_title {
-            font-size: 16px;
+            font-size: 20px;
         }
     
         .card_container {
-            margin-top: 15px;
+            margin-top: 25px;
         }
     
         .card {
@@ -645,122 +724,118 @@
         .card h3 {
             margin-top: 5px;
             margin-bottom: 5px;
-            font-size: 10px;
+            font-size: 15px;
         }
     
         .subtitle {
-            font-size: 8px;
+            font-size: 12px;
         }
     
         footer {
-            height: 60px;
+            height: 90px;
         }
     
         .player_left {
-            column-gap: 10px;
+            column-gap: 15px;
         }
     
         .player_left, .player_right {
-            padding: 0 10px;
+            padding: 0 6px;
         }
     
         .player_left img {
-            width: 15px;
+            width: 20px;
+        }
+    
+        .player_left h5 {
+            font-size: 7px;
         }
     
         .player_left .subtitle {
-            font-size: 4px;
-        }
-    
-        .current_album {
-            column-gap: 3px;
-        }
-    
-        .current_album_title h5 {
             font-size: 5px;
         }
     
-        .current_album a {
-            font-size: 6px;
+        .current_album {
+            column-gap: 7px;
+        }
+    
+        .current_album_title {
+            line-height: 4px;
         }
     
         .like_folder {
-            font-size: 8px;
-            row-gap: 2px;
+            row-gap: 4px;
+            font-size: 12px;
         }
     
         .player_main {
-    
-            row-gap: 10px;
-            
+            row-gap: 12px;
         }
     
         .player {
+            font-size: 12px;
             column-gap: 15px;
-            font-size: 10px;
         }
     
-        .fs_30 {
-            font-size: 20px;
-        }
-        
         .loading_lg hr {
             border: 1px solid var(--loading-bar-dark-gray);
-            height: 1px;
-            width: 80px;
+            width: 100px;
         }
     
         .loading_lg .short {
             border: 1px solid var(--loading-bar-light-gray);
-            width: 30px;
         }
     
         .loading_circle {
             width: 6px;
             height: 6px;
+            border-radius: 50%;
         }
     
         .loading_circle.lg {
             position: absolute;
             left: 25px;
-            top:-2px;
-        }
-    
-        .loading_lg {
-            column-gap: 5px;
+            top: -2px;
         }
     
         .loading_charge:hover .short {
-            transition: 1ms;
-            border: 1px solid var(--active-green)
+            border: 1px solid var(--active-green);
         }
         
-    
-        .time_played{
-            font-size: 5px;
-        }
-    
         .player_right {
-            column-gap: 5px;
-            font-size: 6px;
+            column-gap: 10px;
+            font-size: 12px;
         }
-        
+    
         .player_right hr {
             border: 1px solid var(--loading-bar-dark-gray);
             width: 50px;
         }
-        
+    
         .player_right .short {
             border: 1px solid var(--loading-bar-light-gray);
             width: 10px;
         }
-        
+    
         .loading_circle.sm {
             position: absolute;
-            left: 7px;
+            left: 8px;
             top: -2px;
         }
+    
+        .home_menu a::after {
+            visibility: hidden;
+            background-color: var(--active-green);
+            width: 3px;
+            height: 40px;
+            position: absolute;
+            left: -10px;
+            transform: translate(-50%);
+            content: "";
+          }
         
+        
+    
     }
     
     
